@@ -12,6 +12,23 @@
 #     install.packages("devtools")
 # devtools::install_github("xlucpu/MOVICS")
 
+# 
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#     install.packages("BiocManager")
+#     
+# if (!require("devtools")) 
+#     install.packages("devtools")
+    
+
+if(!require('pacman')) {install.packages('pacman')}
+pacman::p_load(MOVICS)
+
+devtools::install_github("xlucpu/MOVICS")
+
+install.packages("/Users/adamsj8/Library/CloudStorage/Box-Box/Zhang Lab/ASAShortCourse-MultiOmics/heatmap.plus_1.3.tar.gz", repos = NULL, type="source") # path to file is for the package source code you just downloaded
+
+install.packages("/Users/adamsj8/Library/CloudStorage/Box-Box/Zhang Lab/ASAShortCourse-MultiOmics/SNFtool_2.3.0.tar.gz", repos = NULL, type="source")
+
 library(MOVICS)
 set.seed(4444)
 
