@@ -70,12 +70,26 @@ If you continue to have trouble, **MOVICS** provides some troubleshooting guidan
 
 Finally, if you'd like to download our example data directly from Github for the analysis, we'll have code to do so using the package *Rfssa*. Alternatively, you can directly download the "brca_dat.Rdata" file under Lecture 2.
 
+**Update**: Another attendee noted that there may be issues in installing the CIMLR package (a dependency of the MOVICS package). The user received an error regarding their gfortran library, which was installed through the homebrew gcc library on Mac. The user found that adding the following lines to their ~/.R/Makecars file resolved their issue:
+ 
+```
+FC = /opt/homebrew/Cellar/gcc/12.2.0/bin/gfortran
+
+F77 = /opt/homebrew/Cellar/gcc/12.2.0/bin/gfortran
+
+FLIBS = -L/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/12
+```
+
+The user referenced the following Stack Overflow exchange that may be able to provide further details: https://stackoverflow.com/questions/29992066/rcpp-warning-directory-not-found-for-option-l-usr-local-cellar-gfortran-4-8/29993906#29993906
+
 
 ## Lecture 3 (April 18) - Dimension reduction for multi-omics data 
 
 RMarkdown code and the corresponding .html report are located in the **Lecture 3** subdirectory. Data is loaded through the 'r.jive' package, and so no data download is required.
 
 If there are issues downloading these files individually, one of the following will likely work: right-clicking the download link and selecting 'Save Link As', or downloading the entire repository as a .zip file and navigating to the relevant documents in the unzipped directory.
+
+The .html file is the preferred lab document; however, if you have issues downloading and viewing the .html document, the .pdf document will also work.
 
 Instructions for obtaining the packages required for the lab portion of the lecture are below.
 
